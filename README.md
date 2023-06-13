@@ -1,4 +1,6 @@
-# my_neovim_config
+# Neovim Config
+
+### For window OS
 this is config folder of neovim
 
 - If errors with fzf-native just install with choco or winget
