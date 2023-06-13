@@ -1,7 +1,7 @@
 # my_neovim_config
 this is config folder of neovim
 
-If errors with fzf-native just install with choco or winget
+- If errors with fzf-native just install with choco or winget
 
 ```
 choco install mingw
