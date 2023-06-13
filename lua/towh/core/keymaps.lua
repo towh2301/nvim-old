@@ -1,5 +1,6 @@
 -- set local keybinds
 local opts = { noremap = true, silent = true }
+local term_opts = { silent = true }
 local keymap = vim.keymap -- for conciseness
 
 -- set leader key to space
@@ -13,23 +14,35 @@ vim.g.maplocalleader = " "
 
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>", opts)
--- move cursor to right windows
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", opts)
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
 
+-- inline options
+keymap.set("n", "el", "<S-w>$", opts) -- move cursor to end of line
+keymap.set("n", "fl", "0", opts) -- move cursor to begin of line
+keymap.set("v", "el", "<S-w>$", opts) -- move cursor to end of line - VISUAL MODE
+keymap.set("v", "fl", "0", opts) -- move cursor to begin of line - VISUAL MODE
+
 -- window management
 keymap.set("n", "sv", "<C-w>v") -- split window vertically
 keymap.set("n", "sh", "<C-w>s") -- split window horizontally
 keymap.set("n", "se", "<C-w>=") -- make split windows equal width & height
 keymap.set("n", "sc", ":close<CR>") -- close current split window
+
 -- Better window navigation
 keymap.set("n", "<leader>h", "<C-w>h", opts) -- move cursor to right windows
 keymap.set("n", "<leader>j", "<C-w>j", opts) -- move cursor to below windows
 keymap.set("n", "<leader>k", "<C-w>k", opts) -- move cursor to up windows
 keymap.set("n", "<leader>l", "<C-w>l", opts) -- move cursor to left windows
+
+-- resize with arrows
+keymap.set("n", "<C-Up>", ":resize +2<CR>", opts) -- resize horizontal
+keymap.set("n", "<C-Down>", ":resize -2<CR>", opts)
+keymap.set("n", "<C-Right>", ":vertical resize -2<CR>", opts) -- resize vertical
+keymap.set("n", "<C-Left>", ":vertical resize +2<CR>", opts)
 
 -- pressing ENTER key
 -- keymap.set("n", "<leader>pe", ":Lex 30<cr>", opts) -- literally pressing the ENTER key
@@ -40,8 +53,34 @@ keymap.set("n", "tc", ":tabclose<CR>", opts) -- close current tab
 keymap.set("n", "tn", ":tabn<CR>", opts) -- go to next tab
 keymap.set("n", "tp", ":tabp<CR>", opts) -- go to previous tab
 
--- resize with arrows
-keymap.set("n", "<C-Up>", ":resize +2<CR>", opts)
+------------
+-- VISUAL --
+------------
+
+-- Stay in indent mode
+keymap.set("v", "<", "<gv", opts)
+keymap.set("v", ">", ">gv", opts)
+
+-- Move text up and down
+keymap.set("v", "<A-j>", ":m .+1<CR>==", opts)
+keymap.set("v", "<A-k>", ":m .-2<CR>==", opts)
+keymap.set("v", "p", '"_dP', opts)
+
+-- Visual Block --
+-- Move text up and down
+keymap.set("x", "J", ":move '>+1<CR>gv-gv", opts)
+keymap.set("x", "K", ":move '<-2<CR>gv-gv", opts)
+keymap.set("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
+keymap.set("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+
+-----------------
+
+-- Terminal --
+-- Better terminal navigation
+keymap.set("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
+keymap.set("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
+keymap.set("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
+keymap.set("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -------------------
 -- Plugin keybinds
@@ -51,8 +90,8 @@ keymap.set("n", "<C-Up>", ":resize +2<CR>", opts)
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", opts) -- toggle split window maximization
 
 -- nvim-tree
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
-keymap.set("n", "<leader>o", ":NvimTreeFocus<CR>") -- focus file explorer
+keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", opts) -- toggle file explorer
+keymap.set("n", "<leader>o", ":NvimTreeFocus<CR>", opts) -- focus file explorer
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
