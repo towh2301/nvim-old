@@ -1,6 +1,3 @@
--- set local key for conciseness
-local fn = vim.fn
-
 -- auto install packer if not installed
 local ensure_packer = function()
   local fn = vim.fn
@@ -50,6 +47,7 @@ return require("packer").startup(function(use)
   use("nvim-lua/plenary.nvim") -- lua function that many plugins use
 
   use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme - ( optional - will be replaced soon )
+  use("folke/tokyonight.nvim") -- tokyonight
 
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigator
 
