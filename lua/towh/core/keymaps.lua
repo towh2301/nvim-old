@@ -12,6 +12,14 @@ vim.g.maplocalleader = " "
 -- General Keymaps
 -------------------
 
+-- Modes
+--   normal_mode = "n",
+--   insert_mode = "i",
+--   visual_mode = "v",
+--   visual_block_mode = "x",
+--   term_mode = "t",
+--   command_mode = "c",
+
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>", opts)
 -- clear search highlights
@@ -21,9 +29,9 @@ keymap.set("n", "<leader>nh", ":nohl<CR>", opts)
 keymap.set("n", "x", '"_x')
 
 -- inline options
-keymap.set("n", "el", "<S-w>$", opts) -- move cursor to end of line
+keymap.set("n", "<S-e>", "<S-w>$", opts) -- move cursor to end of line
 keymap.set("n", "fl", "0", opts) -- move cursor to begin of line
-keymap.set("v", "el", "<S-w>$", opts) -- move cursor to end of line - VISUAL MODE
+keymap.set("v", "<S-e>", "<S-w>$", opts) -- move cursor to end of line - VISUAL MODE
 keymap.set("v", "fl", "0", opts) -- move cursor to begin of line - VISUAL MODE
 
 -- window management
@@ -64,7 +72,11 @@ keymap.set("v", ">", ">gv", opts)
 -- Move text up and down
 keymap.set("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap.set("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap.set("v", "p", '"_dP', opts)
+keymap.set("v", "p", '"_dP', opts) -- prevents copying what was pasted -
+
+-- Navigate buffers
+keymap.set("n", "<S-l>", ":bnext<CR>", opts)
+keymap.set("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Visual Block --
 -- Move text up and down

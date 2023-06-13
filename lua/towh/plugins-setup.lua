@@ -1,3 +1,6 @@
+-- set local key for conciseness
+local fn = vim.fn
+
 -- auto install packer if not installed
 local ensure_packer = function()
   local fn = vim.fn
@@ -13,6 +16,7 @@ local packer_bootstrap = ensure_packer() -- true if packer was installed
 
 -- autocommand that reloads neovim and installs/updates/removes plugins
 -- when file is saved
+-- "plugins-setup.lua" is your file name
 vim.cmd([[
   augroup packer_user_config
     autocmd!
@@ -20,11 +24,21 @@ vim.cmd([[
   augroup end
 ]])
 
---import packer safety
+-- import packer safety
+-- Use a protected call so we don't error out on first use
 local status, packer = pcall(require, "packer")
 if not status then
   return
 end
+
+-- Have packer use a popup window
+packer.init({
+  display = {
+    open_fn = function()
+      return require("packer.util").float({ border = "rounded" })
+    end,
+  },
+})
 
 -- add list of plugins to install
 return require("packer").startup(function(use)
@@ -32,6 +46,7 @@ return require("packer").startup(function(use)
   use("wbthomason/packer.nvim")
 
   -- MY PLUGINS HERE
+  use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
   use("nvim-lua/plenary.nvim") -- lua function that many plugins use
 
   use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme - ( optional - will be replaced soon )

@@ -9,6 +9,7 @@ opt.tabstop = 2 -- 2 space for tabs
 opt.shiftwidth = 2 -- 2 space for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
+opt.smarttab = true -- enhance tab
 
 -- line wrapping
 opt.wrap = false -- disable line wrapping
@@ -38,6 +39,7 @@ opt.clipboard:append("unnamedplus")
 opt.undofile = true -- enable persistent undo
 opt.fileencoding = "utf-8" -- the encoding written to a file
 opt.swapfile = false -- creates a swapfile
+vim.encoding = "utf-8"
 
 -- split windows
 opt.splitright = true -- split vertical window to the right
