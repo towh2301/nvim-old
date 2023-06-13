@@ -1,38 +1,54 @@
--- set leader key to space
-vim.g.mapleader = " "
-
+-- set local keybinds
+local opts = { noremap = true, silent = true }
 local keymap = vim.keymap -- for conciseness
+
+-- set leader key to space
+keymap.set("", "<Space>", "<Nop>", opts)
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -------------------
 -- General Keymaps
 -------------------
 
 -- use jk to exit insert mode
-keymap.set("i", "jk", "<ESC>")
-
+keymap.set("i", "jk", "<ESC>", opts)
+-- move cursor to right windows
 -- clear search highlights
-keymap.set("n", "<leader>nh", ":nohl<CR>")
+keymap.set("n", "<leader>nh", ":nohl<CR>", opts)
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
 
 -- window management
-keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
-keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
-keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
-keymap.set("n", "<leader>sc", ":close<CR>") -- close current split window
+keymap.set("n", "sv", "<C-w>v") -- split window vertically
+keymap.set("n", "sh", "<C-w>s") -- split window horizontally
+keymap.set("n", "se", "<C-w>=") -- make split windows equal width & height
+keymap.set("n", "sc", ":close<CR>") -- close current split window
+-- Better window navigation
+keymap.set("n", "<leader>h", "<C-w>h", opts) -- move cursor to right windows
+keymap.set("n", "<leader>j", "<C-w>j", opts) -- move cursor to below windows
+keymap.set("n", "<leader>k", "<C-w>k", opts) -- move cursor to up windows
+keymap.set("n", "<leader>l", "<C-w>l", opts) -- move cursor to left windows
 
-keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
-keymap.set("n", "<leader>tc", ":tabclose<CR>") -- close current tab
-keymap.set("n", "<leader>tn", ":tabn<CR>") -- go to next tab
-keymap.set("n", "<leader>tp", ":tabp<CR>") -- go to previous tab
+-- pressing ENTER key
+-- keymap.set("n", "<leader>pe", ":Lex 30<cr>", opts) -- literally pressing the ENTER key
+
+-- tab management
+keymap.set("n", "to", ":tabnew<CR>", opts) -- open new tab
+keymap.set("n", "tc", ":tabclose<CR>", opts) -- close current tab
+keymap.set("n", "tn", ":tabn<CR>", opts) -- go to next tab
+keymap.set("n", "tp", ":tabp<CR>", opts) -- go to previous tab
+
+-- resize with arrows
+keymap.set("n", "<C-Up>", ":resize +2<CR>", opts)
 
 -------------------
 -- Plugin keybinds
 -------------------
 
 -- vim-maximizer
-keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
+keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", opts) -- toggle split window maximization
 
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer

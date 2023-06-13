@@ -16,27 +16,56 @@ opt.wrap = false -- disable line wrapping
 -- search settings
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
+opt.hlsearch = true -- highlight all matches on previous search pattern
 
 -- cursor line
 opt.cursorline = true -- highlight the current cursor line
+opt.signcolumn = "yes"
 
 -- appearance
-
 -- turn on termguicolors for nightfly colorscheme to work
 -- (have to use iterm2(Mac only) or any other true color terminal)
--- opt.termguicolors = false
+opt.termguicolors = false
 opt.background = "dark" -- colorschemes that can be light or dark will be made dark
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 
 -- backspace
 opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
+opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
 
--- clipboard
+-- clipboard & file options
 opt.clipboard:append("unnamedplus")
+opt.undofile = true -- enable persistent undo
+opt.fileencoding = "utf-8" -- the encoding written to a file
+opt.swapfile = false -- creates a swapfile
 
 -- split windows
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split vertical window to the bottom
 
--- string option
+-- string options
 opt.iskeyword:append("-") -- consider string-string as whole word
+
+-- time options
+opt.timeoutlen = 1000 -- time to wait for a mapped sequence to complete (in milliseconds)
+opt.updatetime = 300 -- faster completion (4000ms default)
+
+-- backup
+opt.backup = false -- create backup file
+opt.writebackup = false -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
+
+-- scroll setup
+opt.scrolloff = 8 -- is one of my fav
+opt.sidescrolloff = 8
+
+-- others
+opt.mouse = "a" -- allow the mouse to be used in neovim
+opt.pumheight = 10 -- pop up menu height
+vim.opt.showmode = false -- we don't need to see things like -- INSERT -- anymore
+
+opt.shortmess:append("c")
+
+-- under curl options
+vim.cmd("set whichwrap+=<,>,[,],h,l")
+vim.cmd([[set iskeyword+=-]])
+vim.cmd([[set formatoptions-=cro]]) -- TODO: this doesn't seem to work
