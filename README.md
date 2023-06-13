@@ -1,9 +1,6 @@
 # Neovim Config
 
 ### For window OS
-
-***This is config of neovim***
-
 - If errors with fzf-native just install with choco or winget
 
 ```
