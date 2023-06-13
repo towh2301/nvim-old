@@ -1,5 +1,12 @@
 # Neovim Config
 
+- This is requirement
+  - Require NerdFont
+  - Nodejs
+  - Npm
+  - Pip
+
+
 ### For window OS
 - If errors with fzf-native just install with choco or winget
 
