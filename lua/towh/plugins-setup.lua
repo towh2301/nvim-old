@@ -46,8 +46,10 @@ return require("packer").startup(function(use)
   use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
   use("nvim-lua/plenary.nvim") -- lua function that many plugins use
 
+  -- themes
   use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme - ( optional - will be replaced soon )
   use("folke/tokyonight.nvim") -- tokyonight
+  use("nyoom-engineering/oxocarbon.nvim")
 
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigator
 
