@@ -4,7 +4,6 @@ if not setup then
   return
 end
 
-
 -- recommended settings from nvim-tree documentation
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -18,15 +17,24 @@ nvimtree.setup({
   renderer = {
     icons = {
       glyphs = {
+        default = "",
+        symlink = "",
+        bookmark = "󰆤",
+        modified = "●",
         folder = {
-         arrow_closed = "+", -- arrow when folder is closed
-          arrow_open = "", -- arrow when folder is open     
+          arrow_closed = "",
+          arrow_open = "",
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+          symlink_open = "",
         },
       },
     },
   },
-
-  -- disable window_picker for 
+  -- disable window_picker for
   -- explorer tow work well with
   -- window splits
   actions = {
@@ -40,5 +48,4 @@ nvimtree.setup({
   -- git = {
   --   ignore = false,
   -- },
-
 })

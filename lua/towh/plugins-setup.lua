@@ -76,6 +76,12 @@ return require("packer").startup(function(use)
   use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
   use({ "nvim-telescope/telescope-ui-select.nvim" }) -- for showing lsp code actionslsp code actions
 
+  -- file browser with telescope-file-browser
+  use({
+    "nvim-telescope/telescope-file-browser.nvim",
+    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+  })
+
   -- auto completion
   use("hrsh7th/nvim-cmp") -- completion plugin
   use("hrsh7th/cmp-buffer") -- source for text in buffer
