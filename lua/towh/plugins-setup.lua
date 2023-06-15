@@ -49,7 +49,8 @@ return require("packer").startup(function(use)
   -- themes
   use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme - ( optional - will be replaced soon )
   use("folke/tokyonight.nvim") -- tokyonight
-  use("nyoom-engineering/oxocarbon.nvim")
+  use("nyoom-engineering/oxocarbon.nvim") -- oxocarbon colorscheme
+  use("EdenEast/nightfox.nvim") -- nightfox colorscheme
 
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigator
 
