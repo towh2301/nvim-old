@@ -20,3 +20,17 @@ choco install make
 ```
 make
 ```
+***
+# Keymap NeoVim
+
+- ***Surround*** ("tpope/vim-surround")
+	- ***ysw*** + *"symbol"*   =>  ***surround*** a word
+	- ***ds*** + *"symbol"*  => ***delete surround***
+	- ***cs*** + *"before symbol"* + *"after symbol"* => ***change surround*** 
+***
+- ***Copy & Replace***  ("inkarkat/vim-ReplaceWithRegister")
+	-  ***yw*** - *copy text 1*  **`then`** ***grw*** - *replace text 1 with others*
+***
+- ***Comment*** ("numToStr/Comment.nvim")
+	- ***gcc***  => do/undo ***comment*** in ***one line***
+	- ***gc*** + *number of lines* + ***j/k***  => do/undo ***comment*** of ***many lines*** 
