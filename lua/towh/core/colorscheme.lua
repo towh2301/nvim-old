@@ -51,5 +51,23 @@ fox.setup({
   groups = {},
 })
 
+------
+-- ONE DARK
+------
+local one_status, one = pcall(require, "onedark")
+if not one_status then
+  print("onedark is not installed!")
+  return
+end
+
+one.setup({
+  style = "deep",
+  transparent = true,
+})
+
+---------
+--END ONE
+---------
+
 -- setup must be called before loading
-cmd("colorscheme nightfox")
+cmd("colorscheme onedark")

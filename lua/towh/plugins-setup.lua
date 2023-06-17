@@ -51,6 +51,7 @@ return require("packer").startup(function(use)
   use("folke/tokyonight.nvim") -- tokyonight
   use("nyoom-engineering/oxocarbon.nvim") -- oxocarbon colorscheme
   use("EdenEast/nightfox.nvim") -- nightfox colorscheme
+  use("navarasu/onedark.nvim") -- onedark colorscheme
 
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigator
 
