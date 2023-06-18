@@ -139,6 +139,16 @@ return require("packer").startup(function(use)
     end,
   })
 
+  -- markdown preview
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    setup = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
+  })
+
   -- END OF MY PLUGINS
 
   -- Automatically set up your configuration after cloning packer.nvim
