@@ -149,6 +149,15 @@ return require("packer").startup(function(use)
     ft = { "markdown" },
   })
 
+  -- startup nvim custom
+  use({
+    "startup-nvim/startup.nvim",
+    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+    config = function()
+      require("startup").setup()
+    end,
+  })
+
   -- END OF MY PLUGINS
 
   -- Automatically set up your configuration after cloning packer.nvim

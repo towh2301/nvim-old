@@ -71,4 +71,4 @@ one.setup({
 ---------
 
 -- setup must be called before loading
-cmd("colorscheme onedark")
+cmd("colorscheme nightfox")
