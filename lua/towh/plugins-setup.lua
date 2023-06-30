@@ -158,6 +158,15 @@ return require("packer").startup(function(use)
     end,
   })
 
+  -- Flutter Setup
+  use({
+    "akinsho/flutter-tools.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "stevearc/dressing.nvim", -- optional for vim.ui.select
+    },
+  })
+
   -- END OF MY PLUGINS
 
   -- Automatically set up your configuration after cloning packer.nvim
