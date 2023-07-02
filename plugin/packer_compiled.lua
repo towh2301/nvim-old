@@ -104,20 +104,15 @@ _G.packer_plugins = {
     path = "C:\\Users\\huybu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["dressing.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\huybu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\dressing.nvim",
-    url = "https://github.com/stevearc/dressing.nvim"
-  },
-  ["flutter-tools.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\huybu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\flutter-tools.nvim",
-    url = "https://github.com/akinsho/flutter-tools.nvim"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "C:\\Users\\huybu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
+  },
+  ["github-nvim-theme"] = {
+    loaded = true,
+    path = "C:\\Users\\huybu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\github-nvim-theme",
+    url = "https://github.com/projekt0n/github-nvim-theme"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -181,6 +176,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\huybu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "C:\\Users\\huybu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -312,14 +312,14 @@ time([[Setup for markdown-preview.nvim]], false)
 time([[Config for inc-rename.nvim]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15inc_rename\frequire\0", "config", "inc-rename.nvim")
 time([[Config for inc-rename.nvim]], false)
--- Config for: toggleterm.nvim
-time([[Config for toggleterm.nvim]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
-time([[Config for toggleterm.nvim]], false)
 -- Config for: startup.nvim
 time([[Config for startup.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fstartup\frequire\0", "config", "startup.nvim")
 time([[Config for startup.nvim]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
+time([[Config for toggleterm.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]

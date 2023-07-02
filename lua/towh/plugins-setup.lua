@@ -52,6 +52,7 @@ return require("packer").startup(function(use)
   use("nyoom-engineering/oxocarbon.nvim") -- oxocarbon colorscheme
   use("EdenEast/nightfox.nvim") -- nightfox colorscheme
   use("navarasu/onedark.nvim") -- onedark colorscheme
+  use({ "projekt0n/github-nvim-theme" })
 
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigator
 
@@ -138,6 +139,8 @@ return require("packer").startup(function(use)
       require("toggleterm").setup()
     end,
   })
+  -- debug adapter
+  use("mfussenegger/nvim-dap")
 
   -- markdown preview
   use({
@@ -156,15 +159,6 @@ return require("packer").startup(function(use)
     config = function()
       require("startup").setup()
     end,
-  })
-
-  -- Flutter Setup
-  use({
-    "akinsho/flutter-tools.nvim",
-    requires = {
-      "nvim-lua/plenary.nvim",
-      "stevearc/dressing.nvim", -- optional for vim.ui.select
-    },
   })
 
   -- END OF MY PLUGINS
