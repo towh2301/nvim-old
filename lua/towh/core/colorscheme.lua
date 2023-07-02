@@ -62,8 +62,36 @@ if not one_status then
 end
 
 one.setup({
-  style = "deep",
+  style = "darker",
   transparent = true,
+})
+
+local tokyo_status, tokyo = pcall(require, "tokyonight")
+if not tokyo_status then
+  print("tokyonight is not installed!")
+  return
+end
+
+tokyo.setup({
+  transparent = false,
+})
+
+local nightfly_status, nightfly = pcall(require, "nightfly")
+if not nightfly_status then
+  print("nightfly is not installed!")
+  return
+end
+nightfly.nightflyTransparent = true
+
+local githubtheme_status, gittheme = pcall(require, "github-theme")
+if not githubtheme_status then
+  print("githubtheme is not installed!")
+  return
+end
+gittheme.setup({
+  options = {
+    transparent = true,
+  },
 })
 
 ---------
@@ -71,4 +99,4 @@ one.setup({
 ---------
 
 -- setup must be called before loading
-cmd("colorscheme nightfox")
+cmd("colorscheme github_dark")
