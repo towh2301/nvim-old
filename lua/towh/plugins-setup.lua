@@ -130,7 +130,6 @@ return require("packer").startup(function(use)
 
   -- git integration
   use("lewis6991/gitsigns.nvim") -- show line modification on left hand side
-
   -- terminal with toggleterm
   use("akinsho/toggleterm.nvim")
   -- debug adapter
@@ -155,6 +154,9 @@ return require("packer").startup(function(use)
       require("startup").setup()
     end,
   })
+
+  -- github copilot
+  use({ "github/copilot.vim", branch = "release" })
 
   -- END OF MY PLUGINS
 
