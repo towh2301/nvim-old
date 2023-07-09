@@ -2,7 +2,7 @@ local opt = vim.opt -- for conciseness
 
 -- line numbers
 opt.number = true
-opt.relativenumber = false
+opt.relativenumber = true
 
 -- tabs & indentation
 opt.tabstop = 2 -- 2 space for tabs
@@ -26,7 +26,7 @@ opt.signcolumn = "yes"
 -- appearance
 -- turn on termguicolors for nightfly colorscheme to work
 -- (have to use iterm2(Mac only) or any other true color terminal)
-opt.termguicolors = false
+opt.termguicolors = true
 opt.background = "dark" -- colorschemes that can be light or dark will be made dark
 opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 
