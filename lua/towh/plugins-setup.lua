@@ -131,12 +131,20 @@ return require("packer").startup(function(use)
   -- git integration
   use("lewis6991/gitsigns.nvim") -- show line modification on left hand side
   -- terminal with toggleterm
-  use("akinsho/toggleterm.nvim")
-
+  use({
+    "akinsho/toggleterm.nvim",
+    tag = "*",
+  })
   -- debug adapter
-  -- use("mfussenegger/nvim-dap") -- nvim-dap
-  -- use("rcarriga/nvim-dap-ui") -- nvim-dap-ui
-  -- use("rcarriga/cmp-dap")
+  use("mfussenegger/nvim-dap")
+  use("rcarriga/nvim-dap-ui")
+  use("jay-babu/mason-nvim-dap.nvim")
+
+  --------- PLUGINS FOR DAP ----------
+
+  use("leoluz/nvim-dap-go") -- dap for GO language
+
+  ------------------------------------
 
   -- markdown preview
   use({
