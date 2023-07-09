@@ -132,9 +132,11 @@ return require("packer").startup(function(use)
   use("lewis6991/gitsigns.nvim") -- show line modification on left hand side
   -- terminal with toggleterm
   use("akinsho/toggleterm.nvim")
+
   -- debug adapter
-  use("mfussenegger/nvim-dap")
-  use("rcarriga/cmp-dap")
+  -- use("mfussenegger/nvim-dap") -- nvim-dap
+  -- use("rcarriga/nvim-dap-ui") -- nvim-dap-ui
+  -- use("rcarriga/cmp-dap")
 
   -- markdown preview
   use({
