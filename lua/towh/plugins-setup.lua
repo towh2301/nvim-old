@@ -141,6 +141,7 @@ return require("packer").startup(function(use)
   })
   -- debug adapter
   use("mfussenegger/nvim-dap")
+  use("puremourning/vimspector")
 
   -- markdown preview
   use({
