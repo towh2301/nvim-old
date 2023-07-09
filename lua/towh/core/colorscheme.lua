@@ -99,4 +99,4 @@ gittheme.setup({
 ---------
 
 -- setup must be called before loading
-cmd("colorscheme github_dark")
+cmd("colorscheme nightfox")

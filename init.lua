@@ -18,7 +18,7 @@ require("towh.plugins.treesitter")
 require("towh.plugins.gitsigns")
 require("towh.plugins.toggleterm")
 require("towh.plugins.startup_nvim")
-require("towh.plugins.vimspector")
+require("towh.plugins.debug.debug")
 
 ----
 vim.g.nightflyTransparent = true

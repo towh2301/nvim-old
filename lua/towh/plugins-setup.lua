@@ -135,13 +135,18 @@ return require("packer").startup(function(use)
   use({
     "akinsho/toggleterm.nvim",
     tag = "*",
-    config = function()
-      require("toggleterm").setup()
-    end,
   })
   -- debug adapter
   use("mfussenegger/nvim-dap")
-  use("puremourning/vimspector")
+  use("rcarriga/nvim-dap-ui")
+  use("williamboman/mason.nvim")
+  use("jay-babu/mason-nvim-dap.nvim")
+
+  --------- PLUGINS FOR DAP ----------
+
+  use("leoluz/nvim-dap-go") -- dap for GO language
+
+  ------------------------------------
 
   -- markdown preview
   use({
