@@ -98,6 +98,9 @@ return require("packer").startup(function(use)
   -- managing & installing lsp servers, linters & performatters
   use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
   use("williamboman/mason-lspconfig.nvim") -- bridges gap between mason & lspconfig
+  use({
+    "ray-x/lsp_signature.nvim",
+  })
 
   -- configuring lsp servers
   use("neovim/nvim-lspconfig") -- easily configure langueage server
