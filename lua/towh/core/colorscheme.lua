@@ -101,8 +101,4 @@ gittheme.setup({
 vim.g.nightflyTransparent = true
 
 -- setup must be called before loading
-<<<<<<< HEAD
 cmd("colorscheme nightfly")
-=======
-cmd("colorscheme nightfox")
->>>>>>> master

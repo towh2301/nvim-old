@@ -141,13 +141,7 @@ return require("packer").startup(function(use)
   -- debug adapter
   use("mfussenegger/nvim-dap")
   use("rcarriga/nvim-dap-ui")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
   use("williamboman/mason.nvim")
->>>>>>> master
->>>>>>> window/nvim
   use("jay-babu/mason-nvim-dap.nvim")
 
   --------- PLUGINS FOR DAP ----------

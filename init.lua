@@ -21,5 +21,3 @@ require("towh.plugins.startup_nvim")
 require("towh.plugins.debug.debug")
 require("towh.plugins.lsp-signature")
 
-----
-vim.g.nightflyTransparent = true
