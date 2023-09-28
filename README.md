@@ -1,12 +1,10 @@
 # Neovim Config
 
--   Image
+-   <img src="\pictures\nvim1.png"/>
 
-    <img src="C:\Users\huybu\OneDrive\Pictures\nvim\nvim1.png" alt="" style="height: 100px; width:100px;"/>
+    <img src="\pictures\nvim2.png"/>
 
-    <img src="C:\Users\huybu\OneDrive\Pictures\nvim\nvim2.png" alt="" style="height: 100px; width:100px;"/>
-
-    <img src="C:\Users\huybu\OneDrive\Pictures\nvim\mason.png" alt="" style="height: 100px; width:100px;"/>
+    <img src="\pictures\mason.png"/>
 
 -   This is requirement
     -   Require NerdFont
