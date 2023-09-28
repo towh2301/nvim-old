@@ -19,10 +19,7 @@ require("towh.plugins.gitsigns")
 require("towh.plugins.toggleterm")
 require("towh.plugins.startup_nvim")
 require("towh.plugins.debug.debug")
-<<<<<<< HEAD
 require("towh.plugins.lsp-signature")
-=======
->>>>>>> master
 
 ----
 vim.g.nightflyTransparent = true
