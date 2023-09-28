@@ -76,12 +76,11 @@ tokyo.setup({
   transparent = false,
 })
 
-local nightfly_status, nightfly = pcall(require, "nightfly")
+local nightfly_status, nighfly = pcall(require, "nightfly")
 if not nightfly_status then
   print("nightfly is not installed!")
   return
 end
-nightfly.nightflyTransparent = true
 
 local githubtheme_status, gittheme = pcall(require, "github-theme")
 if not githubtheme_status then
@@ -98,5 +97,12 @@ gittheme.setup({
 --END ONE
 ---------
 
+-- nightfly setup
+vim.g.nightflyTransparent = true
+
 -- setup must be called before loading
+<<<<<<< HEAD
+cmd("colorscheme nightfly")
+=======
 cmd("colorscheme nightfox")
+>>>>>>> master

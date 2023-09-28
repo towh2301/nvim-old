@@ -113,3 +113,11 @@ lspconfig["lua_ls"].setup({
     },
   },
 })
+lspconfig["clangd"].setup({
+  capabilities = capabilities,
+  on_attach = function(client, bufnr)
+    -- disable clangd formatting if you plan on formatting via null-ls
+    client.resolved_capabilities.document_formatting = false
+    on_attach(client, bufnr)
+  end,
+})

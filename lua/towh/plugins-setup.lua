@@ -98,6 +98,9 @@ return require("packer").startup(function(use)
   -- managing & installing lsp servers, linters & performatters
   use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
   use("williamboman/mason-lspconfig.nvim") -- bridges gap between mason & lspconfig
+  use({
+    "ray-x/lsp_signature.nvim",
+  })
 
   -- configuring lsp servers
   use("neovim/nvim-lspconfig") -- easily configure langueage server
@@ -130,7 +133,6 @@ return require("packer").startup(function(use)
 
   -- git integration
   use("lewis6991/gitsigns.nvim") -- show line modification on left hand side
-
   -- terminal with toggleterm
   use({
     "akinsho/toggleterm.nvim",
@@ -139,6 +141,13 @@ return require("packer").startup(function(use)
   -- debug adapter
   use("mfussenegger/nvim-dap")
   use("rcarriga/nvim-dap-ui")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  use("williamboman/mason.nvim")
+>>>>>>> master
+>>>>>>> window/nvim
   use("jay-babu/mason-nvim-dap.nvim")
 
   --------- PLUGINS FOR DAP ----------
