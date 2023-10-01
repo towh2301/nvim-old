@@ -172,6 +172,9 @@ return require("packer").startup(function(use)
   -- github copilot
   use({ "github/copilot.vim", branch = "release" })
 
+  -- catppuccin
+  use({ "catppuccin/nvim", as = "catppuccin" })
+
   -- END OF MY PLUGINS
 
   -- Automatically set up your configuration after cloning packer.nvim
