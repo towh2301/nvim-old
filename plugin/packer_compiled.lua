@@ -207,6 +207,14 @@ _G.packer_plugins = {
     path = "/home/towh/.local/share/nvim/site/pack/packer/start/nvim-dap-go",
     url = "https://github.com/leoluz/nvim-dap-go"
   },
+  ["nvim-dap-python"] = {
+    config = { "\27LJ\2\n{\0\2\6\0\4\0\b'\2\0\0006\3\1\0'\5\2\0B\3\2\0029\3\3\3\18\5\2\0B\3\2\1K\0\1\0\nsetup\15dap-python\frequire?~/.local/share/nvim/mason/packages/debugpy/venv/bin/python\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/towh/.local/share/nvim/site/pack/packer/opt/nvim-dap-python",
+    url = "https://github.com/mfussenegger/nvim-dap-python"
+  },
   ["nvim-dap-ui"] = {
     loaded = true,
     path = "/home/towh/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
@@ -354,6 +362,7 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType python ++once lua require("packer.load")({'nvim-dap-python'}, { ft = "python" }, _G.packer_plugins)]]
 vim.cmd [[au FileType markdown ++once lua require("packer.load")({'markdown-preview.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")

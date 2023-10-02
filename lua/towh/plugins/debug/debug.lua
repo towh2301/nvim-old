@@ -30,6 +30,7 @@ require("mason-nvim-dap").setup({
     "clang",
     "clang-format",
     "codelldb",
+    "debugpy",
   },
 })
 
@@ -75,3 +76,5 @@ vim.keymap.set("n", "<F7>", dapui.toggle, { desc = "Debug: See last session resu
 dap.listeners.after.event_initialized["dapui_config"] = dapui.open
 dap.listeners.before.event_terminated["dapui_config"] = dapui.close
 dap.listeners.before.event_exited["dapui_config"] = dapui.close
+
+-- Debug for Python
