@@ -35,7 +35,8 @@ opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or 
 opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
 
 -- clipboard & file options
-opt.clipboard:append("unnamedplus")
+-- opt.clipboard = "unnamedplus"
+vim.opt.clipboard:append({ "unnamedplus" })
 opt.undofile = true -- enable persistent undo
 opt.fileencoding = "utf-8" -- the encoding written to a file
 opt.swapfile = false -- creates a swapfile

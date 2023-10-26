@@ -189,6 +189,11 @@ return require("packer").startup(function(use)
   -- catppuccin
   use({ "catppuccin/nvim", as = "catppuccin" })
 
+  -- lsp
+  use({
+    "lewis6991/hover.nvim",
+  })
+
   -- END OF MY PLUGINS
 
   -- Automatically set up your configuration after cloning packer.nvim

@@ -125,4 +125,4 @@ cat.setup({
 vim.g.nightflyTransparent = true
 
 -- setup must be called before loading
-cmd("colorscheme catppuccin")
+cmd("colorscheme nightfox")
